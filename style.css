@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.abrir{
+  width: 66px;
+}
+
+.sec-one{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left,#23055e, black);
+}
+
+h1{
+    font-size: 50px;
+    color: #fff;
+    position: absolute;top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+}
+
+.menuLatel{
+    background-color: rgb(33, 97, 153);
+    width: 72px;
+    height: 100%;
+    border-right: 3px solid black;
+    overflow: hidden;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    font-weight: 300;
+}
+
+.menuLatel.expandir{
+    width: 240px;
+}
+
+.menuLatel .hamburguer i{
+    font-size: 40px;
+    cursor: pointer;
+    margin: 12px 0px 0px 12px;
+}
+
+.menuLatel .list ul li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    transition: .5s;
+}
+
+.menuLatel .list ul li:hover{
+    background-color: #23055e;
+    gap: 10px;
+}
+
+.menuLatel .list ul li.ativo{
+    background-color: #23055e;
+}
+
+.menuLatel .list i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menuLatel .list ul li a{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 30px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.menuLatel.expandir .list ul li a{
+    margin-left: 0px;
+    opacity: 1;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Lateral</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section class="sec-one">
+    <h1>menu lateral</h1>
+        <div class="menuLatel" id="list">
+                <div class="hamburguer">
+                    <i class="bi bi-list" onclick="abrir()"></i>
+                </div>
+            <div class="list">
+                <ul>
+                    <li class="items ativo">
+                        <i class="bi bi-house"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="items">
+                        <i class="bi bi-bank2"></i>
+                        <a href="#">Sobre</a>
+                    </li>
+                    <li class="items">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <a href="#">Localização</a>
+                    </li>
+                    <li class="items">
+                        <i class="bi bi-bag"></i>
+                        <a href="#">Produtos</a>
+                    </li>
+                    <li class="items">
+                        <i class="bi bi-shop"></i>
+                        <a href="#">Lojas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   </section>
+
+   <script>
+        function abrir(){
+            var lista = document.getElementById('list')
+           lista.classList.toggle('expandir')
+        }
+
+        //icone ativo
+
+        icones = document.querySelectorAll('.items')
+
+        function selectLink(){
+           icones.forEach((item)=>
+            item.classList.remove('ativo')
+        )
+        this.classList.add('ativo')
+        }
+
+        icones.forEach((item)=>
+         item.addEventListener('click', selectLink)
+        )
+   </script>
+</body>
+</html>
